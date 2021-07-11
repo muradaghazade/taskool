@@ -6,6 +6,8 @@ ENV PYTHONUNBUFFERED 1
 COPY requirements.txt /code/requirements.txt
 WORKDIR /code
 RUN pip install -r requirements.txt
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate
 ADD . .
 
 
