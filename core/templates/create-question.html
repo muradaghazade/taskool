@@ -31,35 +31,35 @@
         <ul class="left-ul">
             <li class="mt-4" style="padding: 20px; ">
                 <a href="" class="sidebar-items left-li">
-                    Created
+                    Yaradılmış kurslar
                 </a>
             </li>
             <li class="mt-4" style="padding: 20px; ">
                 <a href="" class="sidebar-items left-li">
-                    Shared
+                    Paylaşılmış kurslar
                 </a>
             </li>
             <li class="mt-4" style="padding: 20px; ">
                 <a href="" class="sidebar-items left-li">
-                    Create Course
+                    Kurs Yarat
                 </a>
             </li>
             <li class="mt-4" style="padding: 20px; ">
                 <a href="{% url 'core:edit-profile' %}" class="sidebar-items left-li">
-                    Edit Profile
+                    Profili düzəlt
                 </a>
             </li>
         </ul>
     </div>
     <div id="left-side-div" class="left-side col-3">
         <div class="left-ques d-flex mt-5 justify-content-between">
-            <h3 class="left-ques-h">Question</h3> 
+            <h3 class="left-ques-h">Sual</h3> 
             <a href="">
             <button class="left-ques-button">+</button></a>  
         </div>
         <div class="left-tools">
             <div class="left-ques d-flex justify-content-between">
-                <h5 class="left-ques-h">- Text</h5>
+                <h5 class="left-ques-h">- Mətn</h5>
                 <button class="left-ques-button" id="text1">+</button>
             </div>
             <!-- <div class="left-ques d-flex justify-content-between">
@@ -71,7 +71,7 @@
                 <button id="video1" class="left-ques-button">+</button>
             </div>
             <div class="left-ques d-flex justify-content-between">
-                <h5 class="left-ques-h">- Picture</h5>
+                <h5 class="left-ques-h">- Şəkil</h5>
                 <button id="image1" class="left-ques-button">+</button>
             </div>
             <div class="left-ques d-flex justify-content-between">
@@ -81,7 +81,7 @@
         </div>
 
         <div class="left-ques d-flex mt-5 justify-content-between">
-            <h3 class="left-ques-h">Answer</h3>   
+            <h3 class="left-ques-h">Cavab</h3>   
             <button class="left-ques-button">+</button>
         </div>
         <div class="left-tools">
@@ -100,13 +100,13 @@
             <button style="border: none; background-color: rgb(245, 223, 76); padding: 10px; border-radius: 5px;">Add next +</button>
         </a>
         </div>
-        <h2 class="text-center mt-5" style="color: #666;">Create Question</h2>
+        <h2 class="text-center mt-5" style="color: #666;">Yeni sual yarat</h2>
 
         <form class='form_subject text-center question_form' action="/">
         
         
             <div id="is_auto" class="item mt-3 ">
-                <label style="color: #666;" for="name">For automating checking answer press <b>Auto</b> for personaly press <b>Person</b><span></span></label>
+                <label style="color: #666;" for="name">Avtomatlaşdırılmış yoxlanılma üçün <b>Auto</b>-nu basın, digər üsullar üçün <b>Person</b>-nı basın<span></span></label>
                 <div class="name-item">
                     <div class="yes auto btn btn-secondary">
                         Auto
@@ -118,7 +118,7 @@
         
             </div>
             <div id="question-title" style="display: none;" class="item mt-3">
-                <label for="name">Question Title<span>*</span></label>
+                <label for="name">Sualın başlıqı<span>*</span></label>
                 <div class="name-item">
                     <input class="input p-2" id="title" type="text" name="title" placeholder="Title" />
         
@@ -126,7 +126,7 @@
             </div>
         
             <div id="question-text" style="display:none ;" class="item mt-3">
-                <label for="name">Question<span>*</span></label>
+                <label for="name">Sual<span>*</span></label>
                 <div class="name-item">
                     <textarea id="question" style="width: 450px;;" name="question" cols="30" rows="10"></textarea>
         
@@ -135,42 +135,42 @@
             </div>
         
             <div style="display: none;" class="item mt-3 correct_answer_div">
-                <label for="name">Correct answer<span></span></label>
+                <label for="name">Düzgün cavab<span></span></label>
                 <div class="name-item">
                     <input style="width: 30%;height:40px;" id="correct_answer" class="correct_answer" type="text" name="correct_answer">
                 </div>
             </div>
             <div class="options_div" style="display: none;">
                 <div class="item mt-3">
-                    <label for="name">Option1<span>*</span></label>
+                    <label for="name">Cavab-1<span>*</span></label>
                     <div class="name-item">
                         <input id='option1' class="input option p-2" id="name" type="text" name="title" placeholder="Title" />
         
                     </div>
                 </div>
                 <div class="item mt-3">
-                    <label for="name">Option2<span>*</span></label>
+                    <label for="name">Cavab-2<span>*</span></label>
                     <div class="name-item">
                         <input id='option2' class="input option p-2" id="name" type="text" name="title" placeholder="Title" />
         
                     </div>
                 </div>
                 <div class="item mt-3">
-                    <label for="name">Option3<span>*</span></label>
+                    <label for="name">Cavab-3<span>*</span></label>
                     <div class="name-item">
                         <input id='option3' class="input option p-2" id="name" type="text" name="title" placeholder="Title" />
         
                     </div>
                 </div>
                 <div class="item mt-3">
-                    <label for="name">Option4<span>*</span></label>
+                    <label for="name">Cavab-4<span>*</span></label>
                     <div class="name-item">
                         <input id='option4' class="input option p-2" id="name" type="text" name="title" placeholder="Title" />
         
                     </div>
                 </div>
                 <div class="item mt-3">
-                    <label for="name">Option5<span>*</span></label>
+                    <label for="name">Cavab-5<span>*</span></label>
                     <div class="name-item">
                         <input id='option5' class="input option p-2" id="name" type="text" name="title" placeholder="Title" />
         

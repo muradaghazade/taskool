@@ -321,22 +321,22 @@
                 <ul class="left-ul">
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="" class="sidebar-items left-li">
-                            Created
+                            Yaradılmış
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="" class="sidebar-items left-li">
-                            Shared
+                            Paylaşılan
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="{% url 'core:create-course' %}" class="sidebar-items left-li">
-                            Create Course
+                            Kurs Yaradın
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="{% url 'core:edit-profile' %}" class="sidebar-items left-li">
-                            Edit Profile
+                            Profili düzəlt
                         </a>
                     </li>
                 </ul>
@@ -348,62 +348,61 @@
         <div class="testbox col-9">
             <form action="" id="courseForm">
                 <div class="item">
-                    <h2>Create Your Course</h2>
+                    <h2>Kurs yarat</h2>
                 </div>
                 <div class="item">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input class="inp" type="radio" name="options" id="option1" autocomplete="off" checked> Course
+                            <input class="inp" type="radio" name="options" id="option1" autocomplete="off" checked> Kurs
                         </label>
                         <label class="btn btn-secondary">
-                            <input class="inp" type="radio" name="options" id="option2" autocomplete="off"> Intertnship
+                            <input class="inp" type="radio" name="options" id="option2" autocomplete="off"> Oyunlar
                         </label>
                         <label class="btn btn-secondary">
-                            <input class="inp" type="radio" name="options" id="option3" autocomplete="off"> Buisness task
+                            <input class="inp" type="radio" name="options" id="option3" autocomplete="off"> Olimpiadalar
                         </label>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="item col-6 form-it">
-                        <label for="name">Course Name<span>*</span></label>
+                        <label for="name">Kursun adı<span>*</span></label>
                         <input class="inp" id="title" type="text" name="name" placeholder="" />
 
                     </div>
                     <div class="item col-6 form-it">
-                        <label for="description">Description<span>*</span></label>
+                        <label for="description">Məzmun<span>*</span></label>
                         <textarea name="description" id="description" cols="30" rows="2"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="item col-6 form-it">
-                        <label for="price">Price<span>*</span></label>
+                        <label for="price">Qiymət<span>*</span></label>
                         <input class="inp" id="price" type="number" name="price" />
                     </div>
                     <div class="item col-6 form-it">
-                        <label for="age">Minimum Age<span>*</span></label>
+                        <label for="age">Minimal yaş həddi<span>*</span></label>
                         <input class="inp" id="age" type="number" name="number" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="item col-6 form-it">
-                        <label for="time">Course Period<span>*</span></label>
+                        <label for="time">Kursun müddəti<span>*</span></label>
                         <input class="inp" id="time" type="text" name="time" />
                     </div>
                     <div class="item col-6 form-it">
-                        <label for="image">Course picture<span>*</span></label>
+                        <label for="image">Kursun şəkli<span>*</span></label>
                         <input class="inp" id="image" type="file" name="age" />
                     </div>
                 </div>
 
-                <div class="item col-6 form-it">
-                    <label for="image">Course presentation video</label>
+                <div class="item col-6 form-it">Kursun təqdimat videosu</label>
                     <input class="inp" id="video" class="file1" type="file" name="video">
                 </div>
 
                 <div class="row d-flex justify-content-center">
 
-                    <button type="submit">Next</button>
+                    <button type="submit">Sonrakı</button>
                 </div>
 
 

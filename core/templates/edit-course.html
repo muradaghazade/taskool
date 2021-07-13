@@ -290,22 +290,22 @@
                 <ul class="left-ul">
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="" class="sidebar-items left-li">
-                            Created
+                            Yaradılmış kurslar
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="" class="sidebar-items left-li">
-                            Shared
+                            Paylaşılmış kurslar
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="{% url 'core:create-course' %}" class="sidebar-items left-li">
-                            Create Course
+                            Kurs yarat
                         </a>
                     </li>
                     <li class="mt-4" style="padding: 20px; ">
                         <a href="{% url 'core:edit-profile' %}" class="sidebar-items left-li">
-                            Edit Profile
+                            Profili düzəlt
                         </a>
                     </li>
                 </ul>
@@ -314,30 +314,30 @@
         </div>
     <div class="d-none" id="pk">{{course.id}}</div>
     <div class="testbox">
-        <div><h1>Edit Your course</h1></div>
+        <div><h1>Kurs Yarat</h1></div>
         <form action="" id="courseForm">
             <div class="d-flex">
                 <div class="item">
-                    <label for="name">Course Name<span>*</span></label>
+                    <label for="name">Kurs adi<span>*</span></label>
                         <input id="title" type="text" name="name" placeholder="" />
     
                 </div>
                 <div class="item">
-                    <label for="description">Description<span>*</span></label>
+                    <label for="description">Məzmun<span>*</span></label>
                     <textarea name="description" id="description" cols="30" rows="1"></textarea>
                 </div>
                 <div class="item">
-                    <label for="price">Price<span>*</span></label>
+                    <label for="price">Qiymət<span>*</span></label>
                     <input id="price" type="number" name="price" />
                 </div>
             </div>
             
             <div class="item">
-                <label for="age">Minimum Age<span>*</span></label>
+                <label for="age">Minimal yaş həddi<span>*</span></label>
                 <input id="age" type="number" name="number" />
             </div>
             <div class="item">
-                <label for="time">Course Period<span>*</span></label>
+                <label for="time">Kurs<span>*</span></label>
                 <input id="time" type="text" name="time" />
             </div>
             <!-- <div class="item">
