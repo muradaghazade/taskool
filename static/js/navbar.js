@@ -53,10 +53,10 @@ getTokenData = () => {
           }
           else {
             document.querySelector(".user-data-here").innerHTML = `<a href="/login" style="color:white;">
-            <button class="btn auth my-2 my-sm-0 ml-4" type="submit" style="color:white;">Login</button>
+            <button class="btn auth my-2 my-sm-0 ml-4" type="submit" style="color:white;">Giriş</button>
           </a>
           <a href="/register-type">
-            <button class="btn auth-reg my-2 my-sm-0 ml-4" type="submit">Register</button>
+            <button class="btn auth-reg my-2 my-sm-0 ml-4" type="submit">Qeydiyyat</button>
           </a>`
           }
         })
