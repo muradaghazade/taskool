@@ -268,7 +268,7 @@ document.querySelector(".question_form").addEventListener('submit', (e) => {
     
 
     if(document.querySelector('.correct_answer_div').style.display == 'block'){
-        questionCreate(title,question,correct_answer,subject_id, options, is_auto)
+        questionCreate(title,questionText,correct_answer,subject_id, options, is_auto)
         console.log('bura girdim');
         // for (let i of options) {
         //     if (i != "") {
