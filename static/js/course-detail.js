@@ -11,6 +11,7 @@ getCourseDetail = () => {
     .then((resp) => resp.json())
     .then((data) => {
       console.log(data);
+      localStorage.setItem("course_title", data.title)
       document.querySelectorAll(".the-title").forEach(element => {
           element.innerHTML = data.title
       });

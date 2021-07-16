@@ -21,7 +21,7 @@ let next_id = usable_ids.indexOf(pk) + 1
 // console.log(usable_ids[usable_ids.length - 1],'aaaa');
 
 if(usable_ids[next_id-1] == usable_ids[usable_ids.length - 1]){
-  document.getElementById('next-a').href = `/`
+  document.getElementById('next-a').href = `/congrats`
   
 }
 else {

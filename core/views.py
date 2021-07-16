@@ -10,6 +10,8 @@ from core.models import *
 class MainPageView(TemplateView):
     template_name = 'main-page.html'
 
+class CongratsPageView(TemplateView):
+    template_name = 'congrats.html'
 
 class CourseListView(ListView):
     model = Course

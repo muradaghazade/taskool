@@ -1,0 +1,1 @@
+document.querySelector('.course-title').innerHTML = localStorage.getItem("course_title")

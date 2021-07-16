@@ -1,5 +1,5 @@
 url = "/api/v1/core/all-courses/";
-
+localStorage.removeItem("course_title")
 getCourseList = () => {
     fetch(url)
     .then((resp) => resp.json())
