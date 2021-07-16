@@ -24,7 +24,7 @@ getCourseList = () => {
 </a>
 
   <div class="card-body">
-  <h4 class="mt-3">${element.title}</h4>
+  <h4 class="mt-3" style="font-size: 20px;">${element.title}</h4>
   <p style="height: 50px; overflow: scroll;">${element.description}</p>
   <h6 class="card-text">${element.price} AZN</h6>
   </div>
@@ -98,7 +98,7 @@ getBTaskList = () => {
 </a>
 
   <div class="card-body">
-  <h4 class="mt-3">${element.title}</h4>
+  <h4 class="mt-3" style="font-size: 20px;">${element.title}</h4>
   <p style="height: 50px; overflow: scroll;">${element.description}</p>
   <h6 class="card-text">${element.price} AZN</h6>
   </div>
