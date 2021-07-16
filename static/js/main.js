@@ -18,7 +18,7 @@ getCourseList = () => {
           document.querySelector(".flexxx").innerHTML += `
           
           <div class="col-md-3 mb-3 col-12">
-          <div class="card" style=" height: 350px;">
+          <div class="card" style=" height: 370px;">
           <a href="/course/${element.id}" style="color: black; text-decoration: none;">
   <div class="card-img-top" style="background: url(${element.image}); height: 170px; background-size: cover;"></div>
 </a>
@@ -92,7 +92,7 @@ getBTaskList = () => {
         document.querySelector("#fleximg3").innerHTML += `
 
         <div class="col-md-3 mb-3 col-12">
-          <div class="card" style=" height: 350px;">
+          <div class="card" style=" height: 370px;">
           <a href="/course/${element.id}" style="color: black; text-decoration: none;">
   <div class="card-img-top" style="background: url(${element.image}); height: 170px; background-size: cover;"></div>
 </a>
