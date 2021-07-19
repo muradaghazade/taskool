@@ -23,7 +23,7 @@ register = (username, firstname, lastname, email, password1, password2, age) => 
         password: password1,
         password2: password2,
         age: age,
-        is_teacher: true,
+        is_teacher: false,
         is_student: false
     }
     fetch(registerURL, {

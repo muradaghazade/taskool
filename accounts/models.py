@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.core.mail import send_mail
 
 
 class User(AbstractUser):
@@ -17,3 +18,12 @@ class User(AbstractUser):
         verbose_name = 'User'
         verbose_name_plural = 'Users'
 
+    def save(self, *args, **kwargs):
+        super(User, self).save(*args, **kwargs)
+        if self.is_teacher:
+            print("Taskool'da ilk Kursunuzu yaradin!")
+            send_mail("Taskool'da ilk Kursunuzu yaradin!", f'Sizin Instructor hesabiniz qəbul edilmişdir! Taskool heabizina daxil olun ve öz kurslarinizi yaradmaqa başlayin!\nhttps://taskool.com/login', 'husubayli@gmail.com', [self.email,])
+        else:
+            print("Sizin Instructor hesabiniz baxişdadir!")
+            send_mail('Sizin Instructor hesabiniz baxişdadir!', f'Sizin Instructor hesabiniz baxişdadi!\nZəhmət olmasa hesabiniz qəbul olunana qədər gözləyin.', 'husubayli@gmail.com', [self.email,])
+        # super(User, self).save(*args, **kwargs)
