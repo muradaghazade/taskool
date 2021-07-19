@@ -33,10 +33,15 @@
 
       <input class="d-none form-control mr-sm-2 ml-5" type="search" placeholder="Axtar">
       {% if user.is_authenticated %}
+        {% if user.is_teacher %}
       <a href="/profile"><button class="btn auth-reg my-2 my-sm-0 ml-4" type="submit">{{request.user.username}}</button>
       </a>
+        {% else %}
+        <a href="/student-profile"><button class="btn auth-reg my-2 my-sm-0 ml-4" type="submit">{{request.user.username}}</button>
+        </a>
+        {% endif %}
       <a href="{% url 'core:log-out' %}">
-      <button class="btn my-2 my-sm-0 ml-4" id="log-out2" type="submit">Çıxış</button>
+      <button class="btn my-2 my-sm-0 ml-4" id="log-out2" type="submit" style="color: white;">Çıxış</button>
     </a>
       {% else %}
       <a href="{% url 'core:profile' %} ">
@@ -48,7 +53,7 @@
             <button class="btn auth-reg my-2 my-sm-0 ml-4" type="submit">Qeydiyyat</button>
           </a>
           </div>
-            <button class="btn my-2 my-sm-0 ml-4" id="log-out" type="submit" style="color: white;">Çıxış</button>
+            <!-- <button class="btn my-2 my-sm-0 ml-4" id="log-out" type="submit" style="color: white;">Çıxış</button> -->
           
       </a>
       {% endif %}
