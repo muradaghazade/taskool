@@ -197,7 +197,7 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hSrbEkn8Y1OKCCE1Z3oaEeI9'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 LOGIN_URL = reverse_lazy('core:login')
-LOGIN_REDIRECT_URL = reverse_lazy('core:profile')
+LOGIN_REDIRECT_URL = reverse_lazy('core:main')
 LOGOUT_URL = reverse_lazy('core:login')
 LOGOUT_REDIRECT_URL = reverse_lazy('core:login')
 

@@ -9,8 +9,10 @@ getCourseList = () => {
           console.log(element.category);
           if (element.category == 1 && element.is_shared == true) {
             document.getElementById("list-here").innerHTML += `
-            <div class="card col-3" style="width: 18rem; margin:25px">
-            <img src="${element.image}" class="card-img-top" alt="...">
+            <div class="card col-3" style="width: 18rem; margin:25px;padding:0;">
+            <div style="background: url(${element.image});    height: 200px;
+            background-size: cover;
+            background-repeat: no-repeat;"></div>
             <div class="card-body">
                 <div class="row justify-content-between" style="align-items: center;">
                 <div class="col-7">
