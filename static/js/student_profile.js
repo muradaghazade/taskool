@@ -38,7 +38,7 @@ fetch(`/api/v1/user-data/`, {
                       <div class="card-body">
                           <div class="row justify-content-between" style="align-items: center;">
                           <div class="col-7">
-                              <h3 class="card-title" style="font-weight:bold;">${course.title}</h3>
+                              <h3 class="card-title" style="font-weight:bold; font-size: 17px;">${course.title}</h3>
                               <p class="card-text">for ${course.course_deadline} weeks</p>
                           </div>
                               <h5 class="card-title col-4" style="width:80%;display: flex;justify-content: center;align-items: center;background-color: rgb(245, 223, 76); border-radius: 5px;font-size:16px;color:white;padding: 10px 0px;">${course.price} AZN</h5>
