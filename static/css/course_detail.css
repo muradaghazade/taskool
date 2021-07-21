@@ -15,8 +15,9 @@
 .main-ddd{
     background-image: url(../img/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg);
     background-position: center;
-height: 620px;
+/* height: 620px; */
     background-size: cover;
+    padding-bottom: 200px;
 }
 .section__955{
     background-color: #343a40!important;
