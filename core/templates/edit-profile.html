@@ -27,19 +27,20 @@
       z-index: 2;
       line-height: 83px;
       }
-      .testbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: inherit;
-      padding: 20px;
+      body{
+        background-image: url("../../static/img/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
       }
-      form {
-      width: 100%;
-      padding: 20px;
-      border-radius: 6px;
-      background: #fff;
-      box-shadow: 0 0 8px  #cc7a00; 
+      .testbox {
+        display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+
+    position: relative;
       }
       .banner {
       position: relative;
@@ -133,7 +134,7 @@
       border: 2px solid #ccc;
       }
       input[type=radio]:checked + label:before, label.radio:hover:before {
-      border: 2px solid #cc7a00;
+      border: 2px solid rgb(245, 223, 76);
       }
       label.radio:after {
       content: "";
@@ -142,7 +143,7 @@
       left: 5px;
       width: 8px;
       height: 4px;
-      border: 3px solid #cc7a00;
+      border: 3px solid rgb(245, 223, 76);
       border-top: none;
       border-right: none;
       transform: rotate(-45deg);
@@ -151,6 +152,17 @@
       input[type=radio]:checked + label:after {
       opacity: 1;
       }
+      #editForm {
+    width: 30%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 13px rgba(155, 155, 155, 0.27);
+    border-radius: 8px;
+    margin: 50px;
+  }
       .btn-block {
       margin-top: 10px;
       text-align: center;
@@ -160,13 +172,13 @@
       padding: 10px;
       border: none;
       border-radius: 5px; 
-      background: #cc7a00;
+      background: rgb(245, 223, 76);
       font-size: 16px;
-      color: #fff;
+      color: black;
       cursor: pointer;
       }
       button:hover {
-      background: #ff9800;
+      background: rgb(245, 223, 76);
       }
       @media (min-width: 568px) {
       .name-item, .city-item {
@@ -184,6 +196,9 @@
       padding-bottom:5px;
       }
       }
+      #submit_edit{
+        margin: 0 auto;
+      }
     </style>
 {% endblock %}
 
@@ -193,9 +208,7 @@
   <body>
     <div class="testbox">
       <form action="/" id="editForm">
-        <div class="banner">
-          <h1>TASKOOL</h1>
-        </div>
+
         <div class="item">
           <label for="username">İstifadəçi adı<span>*</span></label>
           <input id="username" type="text" name="İstifadəçi adı"/>
