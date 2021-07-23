@@ -46,7 +46,7 @@ subject = (subject_name, deadline,course_id) => {
       })
 }
 
-async function createCourse (title, teacher, price, image, description, course_deadline, minimum_age, video=null) {
+async function createCourse (title, teacher, price, image, description, course_deadline, minimum_age, video=null,yt_video) {
     // formdata = new FormData();
     // formdata.append("title", title);
     // formdata.append("teacher", teacher);
@@ -64,6 +64,7 @@ async function createCourse (title, teacher, price, image, description, course_d
         teacher: teacher,
         price: price,
         image: file,
+        youtube_video_url: yt_video,
         description: description,
         course_deadline: course_deadline,
         minimum_age: minimum_age,
@@ -110,11 +111,12 @@ document.getElementById("courseForm").addEventListener('submit', (e) => {
   description = document.getElementById("description").value;
   price = document.getElementById("price").value;
   minimum_age = document.getElementById("age").value;
+  yt_video = document.getElementById("yt_video").value;
   course_deadline = document.getElementById("time").value;
   image = document.getElementById("image").files[0];
   video = document.getElementById("video").files[0];
   
-  createCourse(title,data.id, price,image, description,course_deadline,minimum_age, video)
+  createCourse(title,data.id, price,image, description,course_deadline,minimum_age, video, yt_video)
   
       })
   

@@ -17,12 +17,13 @@ function getCourseData(){
     fetch(editUrl)
     .then((resp) => resp.json())
     .then((data) => {
-      // console.log(data);
+      console.log(data);
       document.getElementById("title").value = data.title
       document.getElementById("description").value = data.description
       document.getElementById("price").value = data.price
       document.getElementById("age").value = data.minimum_age
       document.getElementById("time").value = data.course_deadline
+      document.getElementById("yt_video").value = data.youtube_video_url
     //   document.getElementById("image").files = data.image
 
 
@@ -35,6 +36,7 @@ function getCourseData(){
       price = document.getElementById("price").value
       age = document.getElementById("age").value
       time = document.getElementById("time").value
+      yt_video = document.getElementById("yt_video").value
 
 //       image = document.getElementById("image").files[0]
 // console.log(image);
@@ -46,7 +48,8 @@ function getCourseData(){
         price: price,
         description: description,
         course_deadline: time,
-        minimum_age: age
+        minimum_age: age,
+        youtube_video_url:yt_video
     }
 
     fetch(editUrl, {
@@ -58,7 +61,8 @@ function getCourseData(){
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
+        document.location.href = '/'
       })
 
 

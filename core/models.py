@@ -15,7 +15,7 @@ class Course(models.Model):
     minimum_age = models.IntegerField('Minimum age',blank=True,null=False)
     is_shared = models.BooleanField('is shared',default=0)
     category = models.ForeignKey("Category", on_delete=models.CASCADE, db_index=True, related_name='category_course', null=True, blank=True)
-    # shared_at = models.DateTimeField('shared_at')
+    youtube_video_url = models.CharField('YouTube video url',max_length=1000, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

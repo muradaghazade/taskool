@@ -37,6 +37,12 @@ getCourseDetail = () => {
   </video>`
         
       }
+      if(data.youtube_video_url) {
+        let yt_index = data.youtube_video_url.indexOf('=')+1
+        let yt_new = data.youtube_video_url.substring(yt_index)
+        console.log(yt_new);
+        document.querySelector(".yt_video_div").innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${yt_new}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      }
       // document.querySelector('.main-ddd').style.backgroundImage = `url(${data.image})`
     })
 }
