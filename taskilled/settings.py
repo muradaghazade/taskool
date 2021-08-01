@@ -63,6 +63,7 @@ ROOT_URLCONF = 'taskilled.urls'
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend', 
 )
 
@@ -189,8 +190,13 @@ SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [
 ]
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1075264965768-1pq5ujfv8r2j79sdco9cri25spcgi6qo.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hSrbEkn8Y1OKCCE1Z3oaEeI9'
+SOCIAL_AUTH_FACEBOOK_KEY = "964290904303781"        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = "c75edadfd8cff1741ee82c5b50815b34"# App Secret
+
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1075264965768-iddn4818fehluaelf0o60osk7b7380pi.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '46OBTxwlsJOg1IasT8KpY75C'
 
 
 # SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
