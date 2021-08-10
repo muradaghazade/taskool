@@ -9,24 +9,36 @@
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
   <style>
+
+    .inp {
+      width: 65%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .register-button{
+      border: none;
+      padding: 15px;
+      border-radius: 5px;
+      color: white;
+      background-color: orange;
+      margin-bottom: 10px;
+    } 
+
     .text-dark {
       color: white !important;
     }
    
 
-    @media(max-width: 426px){
+    @media (max-width: 426px) {
       .view-all {
       font-size: 13px !important;
     }
     .all {
       width: 90px;
     }
-    .for-img {
-      width: 250px !important;
-    }
 
-};
-.crt-btn{
+}.crt-btn{
   border: none;
     background-color: orange;
     padding: 15px;
@@ -61,9 +73,6 @@
    .footer-thr{
      text-align: center;
    }
-   .for-img {
-      width: 250px !important;
-    }
  }
  @media(max-width:500px){
    .for-img{
@@ -76,9 +85,16 @@
      display: flex;
      flex-direction: column;
    }
-   .for-img {
-      width: 250px !important;
-    }
+ }
+
+ .internship-div{
+   width: 90%;
+   height: 300px;
+   background-image: url("../../static/img/clay-banks-b5S4FrJb7yQ-unsplash.jpg");
+   background-size: cover;
+   background-position: center;
+   padding: 10rem 0;
+   border-radius: 33px;
  }
   </style>
 {% endblock %}
@@ -96,17 +112,15 @@
       <div class="header__container">
         <div class="header__title">
           <div class="input">
-            <h2>Təcrübə edərək bilik qazan</h2>
+            <h2>Learn in practice</h2>
             <p>
-              Praktiki tapşırıqlar və oyunlarla bacarıqlara yiyələnmək daha maraqlı və effektivdir.
-
-
+              Do practical tasks and gain real work experiences or be hired
             </p>
             <!-- <a href="{% url 'core:course-list' %}">
             <button class="mt-3" style="border: none; border-radius: 5px; background-color: darkcyan; padding: 15px; color: white;">See Courses</button>
           </a> -->
           <form class="nav2-search" action="">
-          <input class="main-page-input nav2-input" type="text" placeholder="İstənilən tapşırıqı axtar">
+          <input class="main-page-input nav2-input" type="text" placeholder="Looking for any tasks">
         </form>  
         </div>
         </div>
@@ -117,10 +131,10 @@
       <div class="exam__container">
         <div class="exam__title">
           <h2 class="form mb-4"
-            >Praktika yönümlü dərslər
+            >GET COURSE AND GAIN THE SKILLS BY DOING PRACTICAL TASKS
         </h2>
           <div class="all" style="border: 1px solid black; padding: 7px 13px; border-radius: 3px; color: black;">
-            <a href="{% url 'core:course-list' %}" class="view-all" style="color: black; text-decoration: none;">Hamısı</a>
+            <a href="{% url 'core:course-list' %}" class="view-all" style="color: black; text-decoration: none;">View All</a>
           </div>
         </div>
         <div class="">
@@ -133,39 +147,38 @@
     <hr style="margin: 0;" />
    
 
-    <section style="margin-bottom: 20px;">
-      <h2 style="font-weight: 300;
-      margin-top: 30px;
-      margin-left: 50px;
-      margin-bottom: -20px;
-      color: darkblue;    display: flex;
-      justify-content: space-between;">
-        Faydalı Komputer oyunları
-        <a style="margin-right: 50px; font-size: 17px; font-weight: normal;" href="{% url 'core:internship-list'%}">Hamısı</a>
-      </h2>
-      
-      <div class="container-fluid">
-        
-        <div class="row flexxx" id="fleximg2">
-          
+    <section style="margin-bottom: 20px;display: flex;justify-content: center;">
+      <a style="margin-right: 50px; font-size: 17px; font-weight: normal;" href="{% url 'core:internship-list'%}"></a>
+      <div class="container-fluid internship-div row">
+          <div class="col-7" style="height: 100%;"></div>
+          <div class="col-5" style="height: 100%;margin-top: -50px;">
+            <h1 style="color: white;">INTERNSHIP</h1>
+            <h2 style="color: white;">Find from around the world</h2>
+            <button style="background: #FFDB64;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 4px; border: none; padding: 10px;"><a style="width: 100% ;margin-right: 50px; font-size: 17px; font-weight: normal; color: black;" href="{% url 'core:internship-list'%}">   Programs<i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a></button>
+          </div>
         </div>
-      </div>
     </section>
     <hr style="margin: 0;" />
-    <section class="exam" style="padding-top: 25px">
-      <div class="exam__container">
-        <div class="exam__title">
-          <h2 class="form" style="margin-bottom: 30px !important;"
-            >Olimpiada və yarışlar
-        </h2>
-          <div class="all" style="border: 1px solid black; padding: 7px 13px; border-radius: 3px; color: black;">
-            <a href="{% url 'core:btask-list' %}" class="view-all" style="color: black; text-decoration: none;">Hamısı</a>
+    <section class="exam d-flex" style="padding-top: 25px;justify-content: center;">
+      <div class="row container">
+        <div class="col-6">
+          <h3>Business Tasks</h3>
+          <h1 style="font-weight: bold;">Earn money or be hired</h1>
+          <br><br><br>
+         <a href="{% url 'core:btask-list' %}" class="view-all" style="background: #FFDB64;
+          border-radius: 10px;border: none; outline: none;color: black; text-decoration: none; padding: 30px;">View All</a>
+          <br><br><br>
+          <div class="d-flex" style="flex-direction: column; margin-top: 30px;">
+            <hr style="width: 100%;">
+            <hr style="width: 75%;">
+            <hr style="width:50%;">
+
           </div>
         </div>
-        <div class="">
-          <div class="row" id="fleximg3">
-            
-          </div>
+        <div class="col-6">
+          <img src="../../static/img/Yusif.png" alt="">
         </div>
       </div>
     </section>
@@ -176,20 +189,18 @@
       <div class="work__container">
         <div class="work__title row">
           <div class="worktext col-md-5 col-12">
-            <h3>Gələcəyin insani kimlərdir ?</h3>
+            <h3>How we work</h3>
             <p style="margin-top: 40px; width: 80%;">
-              1.    Tez öyrənərək düzgün qərar verə bilən</p>
+              A.    Apply for the pleasant practical tasks</p>
               <p style="margin-top: 40px; width: 80%;">
-                2.    Kənar tekid və məcburetmələr olmadan özünü yetişdirəbilən</p>
+                B.    Take part in the solution process</p>
                 <p style="margin-top: 40px; width: 80%;">
-                  3.    Düşdüyü mühitdə rahatlıqla ünsiyyət qurabilən</p>
+                  C.    Get feedback and create a better portfolio</p>
                   <p style="margin-top: 40px; width: 80%;">
-                    4.   Gördüyü işi məsuliyyetlə və sevərək edə bilən</p>
-                    <p style="margin-top: 40px; width: 80%;">
-                      5.   Xoşbəxt olmasını bilən</p>
+                    D.   Achieve your goal: generate income or be hired</p>
           </div>
           <div class="workvideo col-md-7 col-12" style="width: 100%;">
-            <iframe width="100%" height="400" style="border-radius: 5px;" src="https://www.youtube.com/embed/atL3Vfd8AMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="400" style="border-radius: 5px;" src="https://www.youtube.com/embed/1ex_bNIFR1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -200,24 +211,21 @@
       
       <div class="container-fluid" style="padding-top: 25px;">
         <div class="row" style="padding: 5px 42px;">
-          <h3 style="color: rgb(245,224,73);">İstifadə qayadı </h3>
+          <h3>For STUDY task creating </h3>
         </div>
         <div class="row" style="padding: 30px;">
           <div class="col-md-6 col-12 " style="padding-top: 15px;">
+            <!-- <h3>
+              500 Insights
+            </h3> -->
             <p style="line-height: 25px; font-weight: 200;">
-              <p style="margin-top: 40px; width: 80%;">
-                A.    Qeydiyyatdan keçərək proqramlara nəzər salın</p>
-                <p style="margin-top: 40px; width: 80%;">
-                  B.    Şəxsi keyfiyyət və bacarıqlarınızı inkişaf etdirmək istədiyiniz sahəyə uyğun proqram seçin</p>
-                  <p style="margin-top: 40px; width: 80%;">
-                    C.    Proqram çərçivəsində üəllim və mütəxəssislərin video təlimatlarını dinləyin, biri-birindən
-                  maraqlı tapşırıqları zamanında icra etməkdən çəkinməyin</p>
-                    <p style="margin-top: 40px; width: 80%;">
-                      D.   Taqşırıqları tamamlayın və istədiyiniz nəticəyə nail olun</p>
+              A better way to increase the auditorium is creating a task-based online course. We provide practical tools which give the opportunity for creating enjoyable programs for users.
+
+              Task-based and experience-oriented programs make our platform more attractive and beneficial.
             </p>
           </div>
-          <div class="col-md-6 col-12" style="width: 500px; display: flex; justify-content: center;">
-            <img class="for-img" style="width: 400px; height: 100%;" src="{% static 'img/How we work 1.png'%}" alt="">
+          <div class="col-md-6 col-12" style="width: 400px; height: 370px;">
+            <img class="for-img" style="width: 100%; height: 100%;" src="https://images.unsplash.com/photo-1558403194-611308249627?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
           </div>
         </div>
       </div>
@@ -230,20 +238,19 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-12" style="text-align: right; margin-top: 50px; display: flex; justify-content: center;">
-            <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" style="width: 300px; border-radius: 5px;">
+            <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" style="width: 370px; border-radius: 5px;">
           </div>
           <div class="col-md-6 col-12" style="padding-left: 40px;">
-            <h2>Müəllimlər üçün</h2>
-            <p class="crt-p" style="width: 100%; margin-top: 50px;">
-              Daha çox dinləyici kütləsinə nail olmağın ən asan yolu, platformamızda praktik tapşırıq əsaslı təlim və tədris proqramları yaratmaqdır. 
-              Platformamızda yaradılan virtual metodolji vasitələrdən istifadə etməklə maraqlı və əyləncəli proqramlar yaradaraq şagir və tətləbələrinizi öyrənməyə dahada həvəsli edəcəksiniz. 
-              Unutmayın, şagirdlərinizin uğuru Sizin uğurunuzdur. 
-              </p>
-            <a style="outline: none; border: none;" href=""><button class="crt-btn">Gözdən keçir</button></a>
+            <h2>Create Business Tasks</h2>
+            <p class="crt-p" style="width: 400px; margin-top: 50px;">Recruit employees based on the competition with the creating tasks.
+
+              Creating short tasks also will help you to hire freelancers.</p>
+            <a style="outline: none; border: none;" href=""><button class="crt-btn">Create</button></a>
           </div>
         </div>
       </div>
     </section>
+
     <footer class="bg-dark text-center text-white mt-0 display">
 
       <div class="d-flex text-center footer-fst">
@@ -258,7 +265,7 @@
               <!--Grid column-->
               <div class="col-auto">
                 <p class="pt-2">
-                  <strong>Abonə olun</strong>
+                  <strong>Subscribe</strong>
                 </p>
               </div>
               <!--Grid column-->
@@ -267,8 +274,8 @@
               <div class="col-md-5 col-12">
                 <!-- Email input -->
                 <div class="form-outline form-white mb-4">
-                  <input type="email" id="form5Example2" class="form-control" placeholder="e-poçt" />
-                  <label class="d-none form-label" for="form5Example2">E-poçt ünvanı</label>
+                  <input type="email" id="form5Example2" class="form-control" placeholder="Email address" />
+                  <label class="d-none form-label" for="form5Example2">Email address</label>
                 </div>
               </div>
               <!--Grid column-->
@@ -277,7 +284,7 @@
               <div class="col-auto">
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-outline-light mb-4">
-                  Göndər
+                  Submit
                 </button>
               </div>
               <!--Grid column-->
@@ -293,7 +300,7 @@
           <!-- Facebook -->
           <a
             class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
+            href="https://www.facebook.com/Taskilled"
             role="button"
             data-mdb-ripple-color="dark"
             ><i class="fab fa-facebook-f"></i
@@ -302,7 +309,7 @@
           <!-- Twitter -->
           <a
             class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
+            href="https://www.youtube.com/channel/UCpR0PKQcr96CUoYboBRNKKg"
             role="button"
             data-mdb-ripple-color="dark"
             ><i class="fab fa-youtube"></i
@@ -320,7 +327,7 @@
           <!-- Instagram -->
           <a
             class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
+            href="https://www.instagram.com/taskilled_com/"
             role="button"
             data-mdb-ripple-color="dark"
             ><i class="fab fa-instagram"></i
@@ -349,33 +356,31 @@
     </div>
 
 <div class="row m-0">
-  <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-2">
-    <h6 class="">Məktəblilər</h6>
+  <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-2 ">
+    <h6 class="">About company</h6>
+
+    <ul class="list-unstyled mb-5">
+      <p style="width: 220px; text-align: start;margin: 0 auto;">Taskilled - is online learning, internship, and job-seeking marketplace that helps students, businesses, and governments gain the skills they need by doing practical tasks. By doing various practical tasks, students at the same time gain real work experiences, possibilities to earn money and in order to be hired.
+
+      </p>
+    </ul>
+  </div>
+  <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-2 footer-scd "  style="text-align: start">
+    <h6 class="">For students</h6>
 
     <ul class="list-unstyled mb-5">
       <li>
-        <a href="{% url 'core:student-profile' %}" class="text-white">Hesabım</a>
+        <a href="{% url 'core:student-profile' %}" class="text-white">My account</a>
       </li>
     </ul>
   </div>
-  <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-2 footer-scd " style="text-align: start">
-    <h6 class="">Haqqımızda</h6>
-
-    <ul class="list-unstyled mb-5" style="text-align: start;">
-      <li class="mb-2">
-        <a href="" class="text-white">Proqramlar</a>
-      </li>
-      <li>
-        <a href="" class="text-white">Bizimlə əlaqə</a>
-      </li>
-    </ul>
-  </div>
+  
   <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-2" style="text-align: start;">
   
 
     <ul class="list-unstyled mb-5" style="text-align: start;">
       <li class="mb-2 footer-thr">
-        <a href="" class="text-white">Dərs yaratmaq</a>
+        <a href="" class="text-white">Create Task</a>
       </li>
     </ul>
   </div>
